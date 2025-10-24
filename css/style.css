@@ -1,0 +1,100 @@
+/* start global style */
+
+body {
+    margin: 0;
+    background-color: #24353F;
+}
+
+html::selection {
+    background-color: #24353fbc;
+    color: whitesmoke;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+
+/* end global style */
+
+
+/* start main style */
+
+.inner {
+    box-shadow: rgb(0, 0, 0) -5px 2px 54px -9px;
+    width: 55%;
+    margin: 55px auto;
+    border-radius: 5px;
+}
+
+.fristh1 {
+    font-family: "Titillium Web", sans-serif;
+    color: #17A2B8;
+    font-weight: 500;
+    font: 40px;
+    line-height: 48px;
+}
+
+.input input {
+    background-color: #24353F !important;
+    color: whitesmoke !important;
+}
+
+input::placeholder {
+    color: rgb(139, 139, 139) !important;
+}
+
+p {
+    color: whitesmoke;
+}
+
+p a {
+    color: white;
+    text-decoration: none;
+    position: relative;
+    transition-duration: .3s ease;
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 400;
+    font: 16px;
+    line-height: 24px;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+button {
+    background-color: #24353f;
+    border: 1px solid #17a2b8;
+    padding: 7px 10px;
+    border-radius: 5px;
+    color: #17a2b8;
+    transition: 0.4s;
+}
+
+button:hover {
+    background-color: #17a2b8;
+    color: white;
+}
+
+button:focus {
+    border: 3px solid #1e6b7b;
+}
+
+#navbarSupportedContent {
+    margin-left: 73%;
+}
+
+.navo {
+    margin-left: 100px;
+}
+
+nav {
+    box-shadow: rgb(0, 0, 0) -5px 2px 54px -9px;
+    background-color: #24353F !important;
+}
+
+
+/* end main style */

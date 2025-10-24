@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Login System</title>
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/fontawesome.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+
+    <!-- Login Section -->
+    <div id="login-section" class="inner d-flex align-items-center justify-content-center">
+        <div class="row shadow p-4 w-100">
+            <h1 class="text-center mb-4 pt-4 fristh1">Smart Login System</h1>
+            <form>
+                <div class="mb-3 input">
+                    <input type="email" class="form-control" id="email" placeholder="Enter your email" required />
+                </div>
+                <div class="mb-3 input">
+                    <input type="password" class="form-control" id="password" placeholder="Enter your password" required />
+                </div>
+                <div class="d-grid mb-3 pt-3">
+                    <button id="login-btn" type="submit">Login</button>
+                </div>
+                <p class="text-center mb-0 pb-4">
+                    Don’t have an account?
+                    <a href="#" id="to-signup">Sign Up</a>
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Signup Section -->
+    <div id="signup-section" class="inner d-flex align-items-center justify-content-center d-none">
+        <div class="row shadow p-4 w-100">
+            <h1 class="text-center mb-4 pt-4 fristh1">Smart Login System</h1>
+            <form>
+                <div class="mb-3 input">
+                    <input type="text" class="form-control" id="name" placeholder="Enter your name" required />
+                </div>
+                <div class="mb-3 input">
+                    <input type="email" class="form-control" id="email" placeholder="Enter your email" required />
+                </div>
+                <div class="mb-3 input">
+                    <input type="password" class="form-control" id="password" placeholder="Enter your password" required />
+                </div>
+                <div class="d-grid mb-3 pt-3">
+                    <button id="signup-btn" type="submit" class="btn btn-success">Sign Up</button>
+                </div>
+                <p class="text-center mb-0 pb-4">
+                    Already have an account?
+                    <a href="#" id="to-login">Signin</a>
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Welcome Section -->
+    <section id="welcome-section" class="d-none">
+        <nav class="navbar navbar-expand-lg " style="background-color: #24353F;">
+            <div class="container">
+                <a class="navbar-brand text-white" href="#">SMART LOGIN</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                    <button id="logout-btn" class="btn btn-outline-light" type="submit">Logout</button>
+                </div>
+            </div>
+        </nav>
+        <div class="inner d-flex align-items-center justify-content-center" style="margin: 20% auto 0 auto;">
+            <div class="row shadow p-4 w-100">
+                <h1 class="p-4 fw-semibold text-center" style="color: #17a2b8;">
+                    Welcome <span id="user"></span>
+                </h1>
+            </div>
+        </div>
+    </section>
+    <script src="./js/all.min.js"></script>
+    <script src="./js/bootstrap.bundle.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
