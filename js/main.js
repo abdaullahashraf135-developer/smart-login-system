@@ -29,7 +29,7 @@ signupBtn.addEventListener("click", (e) => {
 
     let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    let passwordRegex = /^(?=.[a-z])(?=.[A-Z])(?=.*\d)[A-Za-z\d]{8,}$/;
+    let passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{8,}$/;
 
     if (!name || !email || !password) {
         alert("من فضلك املأ جميع الحقول.");
