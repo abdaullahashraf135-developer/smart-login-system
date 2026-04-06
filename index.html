@@ -9,81 +9,124 @@
     <link rel="stylesheet" href="./css/bootstrap.min.css" />
     <link rel="stylesheet" href="./css/fontawesome.min.css" />
     <link rel="stylesheet" href="./css/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-
-    <!-- Login Section -->
-    <div id="login-section" class="inner d-flex align-items-center justify-content-center">
-        <div class="row shadow p-4 w-100">
-            <h1 class="text-center mb-4 pt-4 fristh1">Smart Login System</h1>
-            <form>
-                <div class="mb-3 input">
-                    <input type="email" class="form-control" id="email" placeholder="Enter your email" required />
-                </div>
-                <div class="mb-3 input">
-                    <input type="password" class="form-control" id="password" placeholder="Enter your password" required />
-                </div>
-                <div class="d-grid mb-3 pt-3">
-                    <button id="login-btn" type="submit">Login</button>
-                </div>
-                <p class="text-center mb-0 pb-4">
-                    Don’t have an account?
-                    <a href="#" id="to-signup">Sign Up</a>
-                </p>
-            </form>
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+            <div class="spinner"></div>
+            <p class="loading-text">Loading...</p>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
         </div>
     </div>
 
-    <!-- Signup Section -->
-    <div id="signup-section" class="inner d-flex align-items-center justify-content-center d-none">
-        <div class="row shadow p-4 w-100">
-            <h1 class="text-center mb-4 pt-4 fristh1">Smart Login System</h1>
-            <form>
-                <div class="mb-3 input">
-                    <input type="text" class="form-control" id="name" placeholder="Enter your name" required />
+    <div id="login-section" class="auth-container auth-page-visible">
+        <div class="auth-card">
+            <div class="auth-header">
+                <i class="fas fa-lock-open"></i>
+                <h1>Login</h1>
+                <p>Welcome back</p>
+            </div>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="login-email"><i class="fas fa-envelope"></i> Email</label>
+                    <input type="email" class="form-control" id="login-email" placeholder="your@email.com" required />
                 </div>
-                <div class="mb-3 input">
-                    <input type="email" class="form-control" id="email" placeholder="Enter your email" required />
+                <div class="form-group">
+                    <label for="login-password"><i class="fas fa-key"></i> Password</label>
+                    <input type="password" class="form-control" id="login-password" placeholder="••••••••" required />
                 </div>
-                <div class="mb-3 input">
-                    <input type="password" class="form-control" id="password" placeholder="Enter your password" required />
+                <div class="form-options">
+                    <label class="remember-me">
+                        <input type="checkbox"> Remember me
+                    </label>
+                    <a href="#" class="forgot-password">Forgot password?</a>
                 </div>
-                <div class="d-grid mb-3 pt-3">
-                    <button id="signup-btn" type="submit" class="btn btn-success">Sign Up</button>
-                </div>
-                <p class="text-center mb-0 pb-4">
-                    Already have an account?
-                    <a href="#" id="to-login">Signin</a>
-                </p>
-            </form>
-        </div>
-    </div>
-
-    <!-- Welcome Section -->
-    <section id="welcome-section" class="d-none">
-        <nav class="navbar navbar-expand-lg " style="background-color: #24353F;">
-            <div class="container">
-                <a class="navbar-brand text-white" href="#">SMART LOGIN</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+                <button id="login-btn" type="submit" class="btn-primary-custom">
+                    <span>Login</span>
+                    <i class="fas fa-arrow-right"></i>
                 </button>
-                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-                    <button id="logout-btn" class="btn btn-outline-light" type="submit">Logout</button>
+                <div class="auth-footer">
+                    <p>Don't have an account? <a href="#" id="to-signup-from-login">Create one</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="signup-section" class="auth-container">
+        <div class="auth-card">
+            <div class="auth-header">
+                <i class="fas fa-user-plus"></i>
+                <h1>Create Account</h1>
+                <p>Join us today</p>
+            </div>
+            <form id="signup-form">
+                <div class="form-group">
+                    <label for="signup-name"><i class="fas fa-user"></i> Full Name</label>
+                    <input type="text" class="form-control" id="signup-name" placeholder="John Doe" required />
+                </div>
+                <div class="form-group">
+                    <label for="signup-email"><i class="fas fa-envelope"></i> Email</label>
+                    <input type="email" class="form-control" id="signup-email" placeholder="your@email.com" required />
+                </div>
+                <div class="form-group">
+                    <label for="signup-password"><i class="fas fa-key"></i> Password</label>
+                    <input type="password" class="form-control" id="signup-password" placeholder="••••••••" required />
+                </div>
+                <button id="signup-btn" type="submit" class="btn-primary-custom">
+                    <span>Create Account</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+                <div class="auth-footer">
+                    <p>Already have an account? <a href="#" id="to-login-from-signup">Sign in</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <section id="home-section" class="home-section">
+        <nav class="navbar navbar-expand-lg navbar-modern">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Smart Login</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div class="ms-auto navbar-actions">
+                        <button id="logout-btn" class="btn-danger-custom">
+                            <i class="fas fa-sign-out-alt"></i>
+                            Logout
+                        </button>
+                    </div>
                 </div>
             </div>
         </nav>
-        <div class="inner d-flex align-items-center justify-content-center" style="margin: 20% auto 0 auto;">
-            <div class="row shadow p-4 w-100">
-                <h1 class="p-4 fw-semibold text-center" style="color: #17a2b8;">
-                    Welcome <span id="user"></span>
-                </h1>
+        <div class="welcome-content">
+            <div class="welcome-card">
+                <div class="welcome-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <h1>Welcome, <span id="user-name"></span>!</h1>
+                <p>You have successfully logged into your account.</p>
+                <div class="welcome-stats">
+                    <div class="stat-item">
+                        <i class="fas fa-calendar"></i>
+                        <span id="login-date">Last login: Today</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
+
     <script src="./js/all.min.js"></script>
     <script src="./js/bootstrap.bundle.js"></script>
-    <script src="./js/main.js"></script>
+    <script src="./js/app.js"></script>
 </body>
 
 </html>
